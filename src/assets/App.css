@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background-color: #1E1E1E;
+}
+
+:root{
+  --type-first: Roboto, Helvetica, serif;
+  --type-second: Bowlby One SC, Luminari, fantasy;
+  --type-third: Adelle, Arial, sans-serif;
+  --color-yellow: #DFBD65;
+  --pallete-sand: #58430E;
+  --pallete-light_green: #D2E1DE;
+  --pallete-red: #490404;
+  
+}
+
+body{
+  margin: 0px;
+  color: black;
+  padding-top: 4rem;
+  background: linear-gradient(180deg, #333333 0%, rgba(37, 37, 37, 0.87) 55.13%, rgba(37, 37, 37, 0.79) 100%);
+  font-family: var(--type-first);
+}
+
+h1, h2, h3, h4, p{
+  margin: 0px;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img{
+  display:block;
+  max-width: 100%;
+}
+
+button, input{
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  color: #333;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+  font-family: var(--type-first);
+}
+
+.iconActive{
+  color: var(--pallete-blue)
+}
+
+.container{
+  max-width: 100rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.mainContainer{
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+}
+
+/* .overflow-hidden{
+  overflow: hidden;
+} */
+
+.AppBody{
+  flex: 1;
+}
+
+.title{
+  font-family: var(--type-second);
+  color: var(--pallete-blue);
+  line-height: 1;
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title::after{
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color:#D2C0AD;
+  position: absolute;
+  top: 24px;
+  left: -5px;
+  border-radius: .2rem;
+  z-index: -1;
+}
+
+.animeLeft{
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft .3s forwards;
+}
+
+@keyframes animeLeft {
+  to{
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.animeDown{
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: animeDown .3s forwards;
+}
+
+@keyframes animeDown {
+  to{
+    opacity: 1;
+    transform: initial;
+  }
+}

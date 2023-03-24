@@ -1,0 +1,67 @@
+
+.header{
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  margin-top: -2rem;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.title{
+  font-size: 2.5rem;
+  font-family: var(--type-second);
+  color: #FFF
+}
+
+.line{
+  width: 40rem;
+  height: 0px;  
+  border: 1px solid #856513;
+  margin-left: 5vw;
+}
+
+.routes{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.routes a, button{
+  color: white;
+  margin: 0 1rem;
+}
+
+.routes a:hover, a:focus{
+  color: var(--color-yellow);
+}
+
+#cv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2.5rem;
+  width: 5rem;
+
+  background-color: var(--color-yellow);
+  color: var(--color-sand);
+  font-family: var(--type-first);
+  font-weight: 500;
+}
+
+#cv i{
+  margin-left: .2rem;
+}
