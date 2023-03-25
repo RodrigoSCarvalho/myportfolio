@@ -1,0 +1,30 @@
+.me{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 712px;
+  width: 100%;
+  background-color: linear-gradient(180deg, #333333 0%, rgba(37, 37, 37, 0.87) 55.13%, rgba(37, 37, 37, 0.79) 100%);
+}
+
+.text{
+  margin: 8rem 0 0 4rem;
+}
+
+.nome{
+  font-size: 1.6rem;
+  color: #f0f0f0;
+}
+
+.title{
+  font-family: var(--type-first);
+  font-style: normal;
+  font-weight: 700;
+
+  background: -webkit-linear-gradient(45deg, #FFFFFF 40.06%, #DFBD65 111.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  margin-top: .5rem;
+  font-size: 4rem;
+}

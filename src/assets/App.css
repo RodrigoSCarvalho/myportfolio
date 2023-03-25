@@ -23,8 +23,8 @@ body{
   margin: 0px;
   color: black;
   padding-top: 4rem;
-  background: linear-gradient(180deg, #333333 0%, rgba(37, 37, 37, 0.87) 55.13%, rgba(37, 37, 37, 0.79) 100%);
   font-family: var(--type-first);
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, p{
