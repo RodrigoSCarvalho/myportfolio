@@ -10,13 +10,7 @@
   margin: 8rem 0 0 4rem;
 }
 
-.nome{
-  font-size: 1.6rem;
-  color: #f0f0f0;
-  cursor: default;
-  caret-color: transparent;
 
-}
 
 .title{
   font-family: var(--type-first);
@@ -49,6 +43,17 @@
 #subtitle{
   font-size: 2.2rem;
   font-family: var(--type-first);
+  color: #DFBD65;
+  font-style: italic;
+  font-size: 700;
+  text-shadow: 2px 6px 4px #58430E;
+}
+
+.nome{
+  font-size: 1.6rem;
+  font-family: var(--type-third);
+  color: #FFF;
+  text-shadow: 2px 6px 4px #58430E;
 }
 
 .ctext{
@@ -62,6 +67,97 @@
   max-width: 1000px;
 }
 
+.sectionXp{
+  background: #272727;
+}
+
+.experiencias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+    "titulo titulo"
+    "card card";
+  grid-auto-rows: min-content;
+}
+
+#subtitleXp{
+  font-size: 2.2rem;
+  font-family: var(--type-first);
+  color: #DFBD65;
+  font-style: italic;
+  font-size: 700;
+  text-shadow: 2px 6px 4px #58430E;
+  grid-area: titulo;
+  grid-row: 1;
+}
+
+.txtXp{
+  
+  font-size: 1.6rem;
+  color: #f0f0f0;
+  cursor: default;
+  caret-color: transparent;
+  margin: 4rem 0 6rem 8rem;
+}
+
+.xpCard{
+  background: #333333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  margin-bottom: 4rem;
+  display: block;
+
+  max-width: 60rem;
+  }
 /* .expand{
   grid-column: span 2; 
 } */
+
+.cardWrapped{  
+  grid-area: card;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.xpCard a, p, h1, h2{
+  margin-left:  4rem;
+}
+
+.jobTitle{
+
+  margin-top: 3rem;
+
+  font-size: 2.5rem;
+  font-family: var(--type-first);
+  color: #FFF;
+  font-size: 700;
+  text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.jobSubtitle{
+
+  font-size: 1.5rem;
+  font-family: var(--type-first);
+  color: #DFBD65;
+  font-size: 700;
+  text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+}
+
+.jobPeriod{
+
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+color: #D7D7D7;
+}
+
+.jobDescription{
+  margin:  3rem 4rem 6rem 4rem;
+  
+  font-size: 1.3rem;
+
+}

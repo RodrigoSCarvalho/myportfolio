@@ -24,7 +24,10 @@ body{
   color: black;
   padding-top: 4rem;
   font-family: var(--type-first);
-  overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 h1, h2, h3, h4, p{
