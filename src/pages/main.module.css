@@ -6,11 +6,6 @@
   background-color: linear-gradient(180deg, #333333 0%, rgba(37, 37, 37, 0.87) 55.13%, rgba(37, 37, 37, 0.79) 100%);
 }
 
-.text{
-  margin: 8rem 0 0 4rem;
-}
-
-
 
 .title{
   font-family: var(--type-first);
@@ -54,6 +49,7 @@
   font-family: var(--type-third);
   color: #FFF;
   text-shadow: 2px 6px 4px #58430E;
+  margin-top: 8rem;
 }
 
 .ctext{
@@ -65,19 +61,24 @@
   text-align: justify;
   margin-top: 1rem;
   max-width: 1000px;
+  
 }
 
 .sectionXp{
   background: #272727;
+  width: 100%;
+  padding-top: 2rem;
+  display: block;
+  
 }
 
 .experiencias {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: 
-    "titulo titulo"
-    "card card";
+  display: grid;  grid-template-areas: 
+    "left center right";
+  gap: 4rem;
   grid-auto-rows: min-content;
+  justify-content: center;
+  align-items: center;
 }
 
 #subtitleXp{
@@ -87,17 +88,10 @@
   font-style: italic;
   font-size: 700;
   text-shadow: 2px 6px 4px #58430E;
-  grid-area: titulo;
-  grid-row: 1;
-}
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  /* padding-left: 15rem; */
 
-.txtXp{
-  
-  font-size: 1.6rem;
-  color: #f0f0f0;
-  cursor: default;
-  caret-color: transparent;
-  margin: 4rem 0 6rem 8rem;
 }
 
 .xpCard{
@@ -106,15 +100,23 @@
   border-radius: 50px;
   margin-bottom: 4rem;
   display: block;
-
   max-width: 60rem;
   }
-/* .expand{
-  grid-column: span 2; 
-} */
+
+  .setaEsquerda{
+    grid-area: left;
+    cursor: pointer;
+    width: 5rem;
+  }
+
+  .setaDireita{
+    grid-area: right;
+    cursor: pointer;
+    width: 5rem;
+  }
 
 .cardWrapped{  
-  grid-area: card;
+  grid-area: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,13 +128,12 @@
 
 .jobTitle{
 
-  margin-top: 3rem;
-
   font-size: 2.5rem;
   font-family: var(--type-first);
   color: #FFF;
   font-size: 700;
   text-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 2rem;
 }
 
 .jobSubtitle{
@@ -156,8 +157,8 @@ color: #D7D7D7;
 }
 
 .jobDescription{
-  margin:  3rem 4rem 6rem 4rem;
   
   font-size: 1.3rem;
-
+  padding-bottom: 2.5rem;
+  padding-right: 5rem;
 }

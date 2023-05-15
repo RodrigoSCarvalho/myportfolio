@@ -17,7 +17,10 @@ const Header = () => {
           <button id={styles.cv}>
             {' '}
             CV{' '}
-            <i class="bx bx-sm bxs-download " style={{ color: '#58430e' }}></i>
+            <i
+              className="bx bx-sm bxs-download "
+              style={{ color: '#58430e' }}
+            ></i>
           </button>
         </div>
       </nav>
