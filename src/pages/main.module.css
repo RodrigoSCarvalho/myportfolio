@@ -75,9 +75,8 @@
 .experiencias {
   display: grid;  grid-template-areas: 
     "left center right";
-  gap: 4rem;
   grid-auto-rows: min-content;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -107,13 +106,26 @@
     grid-area: left;
     cursor: pointer;
     width: 5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .setaDireita{
     grid-area: right;
     cursor: pointer;
     width: 5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+.setaDireita i:hover, .setaEsquerda i:hover{
+  -webkit-box-shadow:0px 0px 102px 9px rgba(107,107,107,0.52);
+  -moz-box-shadow: 0px 0px 102px 9px rgba(107,107,107,0.52);
+  box-shadow: 0px 0px 102px 9px rgba(107,107,107,0.52);
+}
 
 .cardWrapped{  
   grid-area: center;
@@ -161,4 +173,33 @@ color: #D7D7D7;
   font-size: 1.3rem;
   padding-bottom: 2.5rem;
   padding-right: 5rem;
+}
+
+.badges {
+  display: flex;
+  column-gap: 1rem;
+  margin-left: 4rem;
+}
+.dots{
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  padding-bottom: 2rem;
+}
+
+.dotDisabled{
+  height: .8rem;
+  width: .8rem;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #DFBD65;
+  
+}
+
+.dotActive{
+  height: .8rem;
+  width: 1.6rem;
+  border-radius: 5px;
+  background-color: #DFBD65;
 }

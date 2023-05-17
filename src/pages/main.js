@@ -51,31 +51,33 @@ const Main = () => {
           <h1 id={styles.subtitleXp}>EXPERIÊNCIAS </h1>
           <div className={`container ${styles.experiencias} `}>
             {slideActive > 0 ? (
-              <div className={styles.setaEsquerda}>
+              <div
+                className={styles.setaEsquerda}
+                onClick={() => changeSlide('diminuir')}
+              >
                 {' '}
-                <a onClick={() => changeSlide('diminuir')}>
-                  <i
-                    className="bx bxs-left-arrow-circle bx-lg"
-                    style={{ color: '#DFBD65' }}
-                  ></i>
-                </a>
+                <i
+                  className="bx bx-chevron-left bx-lg"
+                  style={{ color: '#DFBD65' }}
+                ></i>
               </div>
             ) : null}
             {slideActive < numSlides ? (
-              <div className={styles.setaDireita}>
+              <div
+                className={styles.setaDireita}
+                onClick={() => changeSlide('aumentar')}
+              >
                 {' '}
-                <a onClick={() => changeSlide('aumentar')}>
-                  <i
-                    className="bx bxs-right-arrow-circle bx-lg"
-                    style={{ color: '#DFBD65' }}
-                  ></i>
-                </a>
+                <i
+                  className="bx bx-chevron-right bx-lg"
+                  style={{ color: '#DFBD65' }}
+                ></i>
               </div>
             ) : null}
             {slideActive == 0 ? (
               <div className={`${styles.cardWrapped}`}>
                 <div className={`slide `}>
-                  <div className={`${styles.xpCard} animeLeft`}>
+                  <div className={` animeLeft`}>
                     <h1 className={`${styles.jobTitle} `}> Analista Jr</h1>
                     <h2 className={`${styles.jobSubtitle} `}>Supergasbras</h2>
                     <p className={`${styles.jobPeriod} `}>
@@ -95,6 +97,16 @@ const Main = () => {
                       incidentes de Windows e SAP. E na equipe de Segurança da
                       Informação, tratando demandas de auditoria externa.
                     </p>
+                    <div className={`${styles.badges}`}>
+                      <img
+                        src="https://img.shields.io/badge/-PowerApps-05122A?style=flat&logo=powerapps&logoColor=8d2c85"
+                        alt="PowerApps"
+                      />
+                      <img
+                        src="https://img.shields.io/badge/-PowerAutomate-05122A?style=flat&logo=powerautomate&logoColor=0e46be"
+                        alt="PowerAutomate"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -102,7 +114,7 @@ const Main = () => {
             {slideActive == 1 ? (
               <div className={`${styles.cardWrapped} active`}>
                 <div className={`slide`}>
-                  <div className={`${styles.xpCard} animeLeft`}>
+                  <div className={` animeLeft`}>
                     <h1 className={`${styles.jobTitle} `}>
                       {' '}
                       Criador de Conteúdo
@@ -121,6 +133,16 @@ const Main = () => {
                       Fazneodo uso das ferramentas de edição de imagens mais
                       utilizadas no mercado.
                     </p>
+                    <div className={`${styles.badges}`}>
+                      <img
+                        src="https://img.shields.io/badge/-Photoshop-05122A?style=flat&logo=adobephotoshop"
+                        alt="Adobe Photoshop"
+                      />
+                      <img
+                        src="https://img.shields.io/badge/-WordPress-05122A?style=flat&logo=wordpress"
+                        alt="WordPress"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,7 +150,7 @@ const Main = () => {
             {slideActive == 2 ? (
               <div className={`${styles.cardWrapped}`}>
                 <div className={`slide`}>
-                  <div className={`${styles.xpCard} animeLeft`}>
+                  <div className={` animeLeft`}>
                     <h1 className={`${styles.jobTitle} `}>
                       {' '}
                       Auxiliar Administrativo (Aprendiz)
@@ -147,10 +169,39 @@ const Main = () => {
                       com o relacionamento com o cliente, prestar manutenção nos
                       computadores e suporte na utilização do Pacote Office.
                     </p>
+                    <div className={`${styles.badges}`}>
+                      <img
+                        src="https://img.shields.io/badge/-Office-05122A?style=flat&logo=microsoftoffice&logoColor=d83b01"
+                        alt="Office"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             ) : null}
+          </div>
+          <div className={`${styles.dots} container`}>
+            <div
+              className={
+                slideActive === 0
+                  ? `${styles.dotActive}`
+                  : `${styles.dotDisabled}`
+              }
+            ></div>
+            <div
+              className={
+                slideActive === 1
+                  ? `${styles.dotActive}`
+                  : `${styles.dotDisabled}`
+              }
+            ></div>
+            <div
+              className={
+                slideActive === 2
+                  ? `${styles.dotActive}`
+                  : `${styles.dotDisabled}`
+              }
+            ></div>
           </div>
         </div>
       </section>
