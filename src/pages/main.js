@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './Main.module.css';
 import Foto from '../assets/super.png';
+import Projeto from './projetos/Projeto';
+import SectionTitle from '../components/SectionTitle';
 
 const Main = () => {
   const [slideActive, setSlideAtive] = React.useState(0);
-  const [numSlides, setnumSlides] = React.useState(2);
+  const numSlides = 2;
 
   async function changeSlide(acao) {
     if (acao === 'aumentar') {
@@ -30,12 +32,10 @@ const Main = () => {
           </h1>
         </div>
         <div className={styles.picture}>
-          <img src={Foto} height="360" width="360"></img>
+          <img src={Foto} height="360" width="360" alt="Minha foto"></img>
         </div>
         <div className={`${styles.text}`}>
-          <h1 className={styles.nome} id={styles.subtitle}>
-            SOBRE MIM{' '}
-          </h1>
+          <SectionTitle text={'SOBRE MIM'} />
           <p className={styles.ctext}>
             Sou desenvolvedor web full-stack com foco no desenvolvimento de APIs
             back-end. Me formei bacharel em Sistemas de Informação pela
@@ -47,8 +47,8 @@ const Main = () => {
         </div>
       </section>
       <section className={`${styles.sectionXp}`}>
-        <div className={`container `}>
-          <h1 id={styles.subtitleXp}>EXPERIÊNCIAS </h1>
+        <div className={`container ${styles.xpWrapper}`}>
+          <SectionTitle text={'EXPERIÊNCIAS'} />
           <div className={`container ${styles.experiencias} `}>
             {slideActive > 0 ? (
               <div
@@ -74,7 +74,7 @@ const Main = () => {
                 ></i>
               </div>
             ) : null}
-            {slideActive == 0 ? (
+            {slideActive === 0 ? (
               <div className={`${styles.cardWrapped}`}>
                 <div className={`slide `}>
                   <div className={` animeLeft`}>
@@ -111,7 +111,7 @@ const Main = () => {
                 </div>
               </div>
             ) : null}
-            {slideActive == 1 ? (
+            {slideActive === 1 ? (
               <div className={`${styles.cardWrapped} active`}>
                 <div className={`slide`}>
                   <div className={` animeLeft`}>
@@ -147,7 +147,7 @@ const Main = () => {
                 </div>
               </div>
             ) : null}
-            {slideActive == 2 ? (
+            {slideActive === 2 ? (
               <div className={`${styles.cardWrapped}`}>
                 <div className={`slide`}>
                   <div className={` animeLeft`}>
@@ -205,6 +205,7 @@ const Main = () => {
           </div>
         </div>
       </section>
+      <Projeto />
     </>
   );
 };

@@ -72,6 +72,10 @@
   
 }
 
+.xpWrapper{
+  margin-top: 2rem;
+}
+
 .experiencias {
   display: grid;  grid-template-areas: 
     "left center right";
