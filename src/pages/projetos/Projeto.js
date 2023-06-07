@@ -3,6 +3,16 @@ import styles from './Projeto.module.css';
 import SectionTitle from '../../components/SectionTitle';
 
 const Projeto = () => {
+  const [isHovered, setIsHovered] = React.useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <section className={styles.project}>
       <div className={`container`} style={{ paddingTop: 64 }}>
@@ -27,12 +37,27 @@ const Projeto = () => {
                 />
               </div>
               <div className={styles.gitWrapper}>
-                <button className={styles.btnGit}>
-                  <i
-                    class="bx bx-sm bxl-github"
-                    style={{ color: '#58430E' }}
-                  ></i>
-                </button>
+                <a
+                  className={`${styles.btnGit} ${
+                    isHovered ? styles.hovered : ''
+                  }`}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  target="_blank"
+                  href={
+                    'https://github.com/RodrigoSCarvalho/projeto-de-aplicacao'
+                  }
+                  rel="noreferrer"
+                >
+                  {!isHovered ? (
+                    <i
+                      class="bx bx-sm bxl-github"
+                      style={{ color: '#58430E' }}
+                    ></i>
+                  ) : (
+                    'CONFIRA NO GITHUB'
+                  )}
+                </a>
               </div>
             </div>
           </div>
